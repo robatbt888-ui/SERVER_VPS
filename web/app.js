@@ -107,7 +107,7 @@ async function refresh() {
   try { renderStatus(await readJSON(await fetch('/api/status', { credentials: 'same-origin' }))); }
   catch (error) { if (error.code === 'authentication_required') { window.location.href = '/login'; return; } setStatusMessage(globalStatus, error.message, 'error'); }
 }
-shadReloadButton?.addEventListener('click', () => shadFrame?.contentWindow ? shadFrame.contentWindow.location.reload() : shadFrame?.setAttribute('src', shadFrame.getAttribute('src')));
+shadReloadButton?.addEventListener('click', () => { if (shadFrame) shadFrame.src = shadFrame.src; });
 shadReadyButton?.addEventListener('click', async () => {
   shadReadyButton.disabled = true;
   try { await readJSON(await fetch('/api/shad/mark-ready', { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: '{}' })); await refresh(); }
