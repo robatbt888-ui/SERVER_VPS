@@ -1,25 +1,42 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Traffic Bridge | ورود</title>
-    <link rel="stylesheet" href="/assets/styles.css" />
-  </head>
-  <body class="auth-page">
-    <main class="auth-shell">
-      <section class="auth-card">
-        <div class="brand-mark" aria-hidden="true">TB</div>
-        <p class="eyebrow">TRAFFIC BRIDGE · SERVER</p>
-        <h1>ورود به پنل سرور</h1>
-        <p class="muted">برای مدیریت نشست شاد و فعال‌سازی ارتباط، رمز پنل را وارد کنید.</p>
-        <form action="/login" method="post" class="stack">
-          <label for="password">رمز ورود پنل</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required autofocus />
-          <button class="button button-primary" type="submit">ورود امن</button>
-        </form>
-        <p class="security-copy">این رمز فقط از متغیر محیطی سرور خوانده می‌شود و در مخزن ذخیره نشده است.</p>
-      </section>
-    </main>
-  </body>
-</html>
+    <html lang="fa" dir="rtl">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#f4f9fc" />
+      <title>HooshNet | ورود به پنل</title>
+      <link rel="icon" type="image/png" href="/assets/icon.png" />
+      <link rel="stylesheet" href="/assets/styles.css" />
+      <script>
+        (() => {
+          const saved = localStorage.getItem('hooshnet-theme');
+          const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.dataset.theme = saved || preferred;
+        })();
+      </script>
+    </head>
+    <body class="auth-page">
+      <main class="auth-shell">
+        <div class="auth-tools"><button class="icon-button" id="auth-theme-toggle" type="button" aria-label="تغییر حالت نمایش"><span>تغییر حالت نمایش</span></button></div>
+        <section class="auth-card">
+          <img class="auth-logo" src="/assets/icon.png" alt="آیکون HooshNet" />
+          <p class="eyebrow">HOOSHNET · SERVER</p>
+          <h1>ورود به پنل سرور</h1>
+          <p class="muted">برای مدیریت نشست شاد و فعال‌سازی ارتباط، رمز پنل را وارد کنید.</p>
+          <form action="/login" method="post" class="stack">
+            <label for="password">رمز ورود پنل</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required autofocus />
+            <button class="button button-primary" type="submit">ورود امن</button>
+          </form>
+          <p class="security-copy">این رمز فقط از متغیر محیطی سرور خوانده می‌شود و در مخزن ذخیره نشده است.</p>
+        </section>
+      </main>
+      <script>
+        document.querySelector('#auth-theme-toggle').addEventListener('click', () => {
+          const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem('hooshnet-theme', next);
+        });
+      </script>
+    </body>
+    </html>
