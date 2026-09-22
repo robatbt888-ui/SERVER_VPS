@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f8fb" />
     <meta name="description" content="ورود امن به پنل سرور HooshNet" />
-    <title>HooshNet | ورود به پنل</title>
+    <title>HooshNet | ورود</title>
     <link rel="icon" type="image/png" sizes="1024x1024" href="/assets/icon.png" />
     <link rel="apple-touch-icon" href="/assets/icon.png" />
     <link rel="stylesheet" href="/assets/styles.css" />
@@ -13,25 +13,21 @@
   </head>
   <body class="auth-page">
     <main class="auth-shell">
-      <div class="auth-tools">
-        <button class="icon-button" id="auth-theme-toggle" type="button" aria-label="تغییر حالت نمایش" aria-pressed="false">
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.4A8.5 8.5 0 0 1 8.6 3.5 8.5 8.5 0 1 0 20.5 15.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
-          <span id="auth-theme-label">حالت تیره</span>
-        </button>
-      </div>
+      <div class="auth-topline"><div class="stage-badge"><span class="stage-dot"></span><span>ورود امن</span></div><button class="icon-button" id="auth-theme-toggle" type="button" aria-label="تغییر حالت نمایش" aria-pressed="false"><svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.4A8.5 8.5 0 0 1 8.6 3.5 8.5 8.5 0 1 0 20.5 15.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg><svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg><span id="auth-theme-label">حالت تیره</span></button></div>
       <section class="auth-card">
         <img class="auth-logo" src="/assets/icon.png" alt="آیکون HooshNet" />
-        <p class="eyebrow">HOOSHNET · SERVER</p>
-        <h1>ورود به پنل سرور</h1>
-        <p class="muted">برای مدیریت نشست شاد و فعال‌سازی ارتباط، رمز پنل را وارد کنید.</p>
+        <div class="brand-name auth-brand-name"><span>Hoosh</span><b>Net</b></div>
+        <p class="eyebrow">SECURE SERVER BRIDGE</p>
+        <h1>به مرکز اتصال خوش آمدید</h1>
+        <p class="muted auth-intro">برای مدیریت نشست شاد و کنترل ارتباط سرور، رمز پنل را وارد کنید.</p>
         <form action="/login" method="post" class="stack">
           <label for="password">رمز ورود پنل</label>
           <input id="password" name="password" type="password" autocomplete="current-password" required autofocus />
-          <button class="button button-primary" type="submit">ورود امن</button>
+          <button class="button button-primary" type="submit">ورود به پنل</button>
         </form>
-        <p class="security-copy">این رمز فقط از متغیر محیطی سرور خوانده می‌شود و در مخزن ذخیره نشده است.</p>
+        <p class="security-copy">این رمز فقط از تنظیمات محیطی سرور خوانده می‌شود و در مخزن ذخیره نمی‌شود.</p>
       </section>
+      <p class="auth-footnote">اتصال امن · کنترل در اختیار شما</p>
     </main>
     <script src="/assets/app.js" defer></script>
   </body>
