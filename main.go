@@ -487,9 +487,10 @@ func withSecurityHeaders(next http.Handler) http.Handler {
 		w.Header().Set("X-Content-Type-Options", "nosniff")
 		w.Header().Set("Referrer-Policy", "same-origin")
 		w.Header().Set("X-Frame-Options", "DENY")
+		w.Header().Set("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
 		w.Header().Set(
 			"Content-Security-Policy",
-			"default-src 'self'; frame-src https://web.shad.ir; style-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self' data:;",
+			"default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; frame-src https://web.shad.ir; style-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self' data:;",
 		)
 		next.ServeHTTP(w, r)
 	})
