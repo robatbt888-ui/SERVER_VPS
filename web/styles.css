@@ -159,3 +159,43 @@ html[data-theme="dark"] .theme-icon-sun { display: block; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
 @media (max-width: 850px) { .hero-grid { grid-template-columns: 1fr; } }
 @media (max-width: 620px) { .page-shell { width: min(100% - 24px, 1140px); padding-top: 20px; }.topbar { align-items: flex-start; flex-direction: column; }.top-actions { width: 100%; justify-content: flex-start; flex-wrap: wrap; }.brand-lockup { align-items: flex-start; }.brand-name { font-size: 28px; }.category-nav { grid-template-columns: 1fr; }.category-link { min-height: 59px; }.status-strip { align-items: flex-start; flex-direction: column; }.panel-card { padding: 18px; border-radius: 23px; }.card-header { gap: 8px; }.card-header h1 { font-size: 24px; }.card-actions { flex-direction: column; }.stats-row { grid-template-columns: 1fr; }.stat-card { min-height: 64px; }.auth-card { padding: 23px 18px; border-radius: 23px; }.auth-topline { align-items: flex-start; }.frame-fallback { align-items: flex-start; flex-direction: column; }.shad-frame-wrap, .shad-frame-wrap iframe { min-height: 300px; height: 300px; } }
+
+/* Server flow: same HooshNet language, server-specific content. */
+body.app-page { overflow-x: hidden; }
+.page-shell { padding-bottom: 132px; }
+.server-topbar { direction: ltr; }
+.server-topbar .brand-lockup, .server-topbar .top-actions { direction: ltr; }
+.brand-copy { text-align: left; }
+.app-screen { display: none; animation: rise-in .32s ease both; }
+.app-screen.is-active { display: block; }
+.server-connection-card { max-width: 760px; margin: 0 auto; padding: 22px 24px 23px; }
+.server-connection-card .card-header { direction: ltr; }
+.server-connection-card .card-heading { direction: rtl; text-align: right; }
+.server-connection-card .status-pill { direction: rtl; }
+.server-connection-card .card-copy, .server-connection-card .inline-status { text-align: right; }
+.server-connection-card .orb-area { min-height: 278px; }
+.server-connection-card .connection-toggle { width: 190px; height: 190px; }
+.traffic-title { margin: 20px 0 11px; text-align: right; }
+.stats-row { max-width: 760px; margin: 0 auto; }
+.stats-row .stat-card { min-height: 114px; }
+.server-note { max-width: 760px; margin: 16px auto 0; }
+.bottom-tabs { position: fixed; z-index: 20; right: 50%; bottom: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; width: min(520px, calc(100% - 24px)); padding: 0; transform: translateX(50%); }
+.bottom-tab { display: flex; min-height: 72px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid rgba(255, 255, 255, .16); border-radius: 17px; color: #d9e2ea; background: linear-gradient(135deg, rgba(14, 140, 131, .95), rgba(52, 136, 255, .95) 54%, rgba(239, 71, 111, .95)); box-shadow: 0 12px 30px rgba(0, 0, 0, .24); cursor: pointer; font-size: 11px; font-weight: 800; transition: transform .18s ease, filter .18s ease, opacity .18s ease; }
+.bottom-tab:nth-child(2) { background: linear-gradient(135deg, rgba(52, 136, 255, .95), rgba(239, 71, 111, .95)); }
+.bottom-tab:nth-child(3) { background: linear-gradient(135deg, rgba(239, 71, 111, .95), rgba(14, 140, 131, .95)); }
+.bottom-tab:hover { transform: translateY(-2px); filter: saturate(1.18); }
+.bottom-tab.is-active { color: #fff; box-shadow: 0 0 0 2px rgba(122, 247, 180, .5), 0 14px 34px rgba(0, 0, 0, .32); }
+.bottom-tab svg { width: 23px; height: 23px; }
+.screen-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin: 4px auto 17px; max-width: 980px; }
+.screen-heading h1 { margin: 0; }
+.screen-heading .eyebrow { margin-bottom: 6px; }
+.screen-subtitle { max-width: 620px; margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.9; }
+.screen-badge { display: inline-flex; align-items: center; gap: 7px; flex: 0 0 auto; min-height: 38px; padding: 0 12px; border-radius: 15px; color: var(--accent-text); background: var(--accent); font-size: 11px; font-weight: 800; }
+.shad-screen-card { max-width: 980px; margin: 0 auto; padding: 14px; }
+.browser-bar { display: flex; align-items: center; gap: 9px; min-height: 43px; padding: 0 10px; margin-bottom: 11px; border-radius: 14px; color: #fff; background: linear-gradient(105deg, var(--primary), var(--blue) 55%, var(--pink)); font-size: 12px; font-weight: 800; }
+.browser-lock { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 8px; background: rgba(255,255,255,.2); }.browser-lock svg, .reload-button svg { width: 15px; height: 15px; }
+.reload-button { display: grid; place-items: center; width: 31px; height: 31px; margin-right: auto; border: 0; border-radius: 10px; color: #fff; background: rgba(255,255,255,.16); cursor: pointer; }.reload-button:hover { background: rgba(255,255,255,.28); }
+.shad-full-frame, .shad-full-frame iframe { min-height: min(65vh, 620px); height: min(65vh, 620px); }.shad-actions { display: flex; gap: 10px; margin-top: 12px; }.shad-actions .button { flex: 1; }
+.privacy-card { display: flex; align-items: flex-start; gap: 12px; max-width: 980px; margin: 0 auto 17px; padding: 16px; border: 1px solid var(--primary); border-radius: 21px; background: var(--accent); }.privacy-icon { display: grid; place-items: center; flex: 0 0 43px; width: 43px; height: 43px; border-radius: 13px; color: var(--primary); background: var(--surface-solid); }.privacy-icon svg { width: 23px; height: 23px; }.privacy-card strong { color: var(--accent-text); font-size: 14px; }.privacy-card p { margin: 5px 0 0; color: var(--accent-text); font-size: 12px; line-height: 1.9; }
+.guide-card { max-width: 980px; margin: 0 auto; padding: 18px; }.guide-card-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 7px; }.guide-card-heading h2 { font-size: 19px; }.guide-card-heading span { color: var(--muted); font-size: 11px; }.guide-steps { padding: 0; margin: 0; list-style: none; }.guide-step { display: flex; align-items: flex-start; gap: 12px; min-height: 77px; padding: 12px 0; border-bottom: 1px solid var(--line); }.guide-step:last-child { border-bottom: 0; padding-bottom: 2px; }.step-number { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 32px; border: 1px solid var(--primary); border-radius: 50%; color: var(--accent-text); background: var(--accent); font-size: 13px; font-weight: 900; }.guide-step h3 { margin: 3px 0 4px; font-size: 14px; }.guide-step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.9; }.warning-card { max-width: 980px; margin: 16px auto 0; padding: 16px; border: 1px solid rgba(239, 71, 111, .45); border-radius: 18px; background: rgba(239, 71, 111, .08); }.warning-card strong { color: var(--pink); font-size: 13px; }.warning-card p { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
+@media (max-width: 620px) { .page-shell { width: calc(100% - 24px); padding-top: 20px; padding-bottom: 122px; }.server-topbar { align-items: flex-start; }.server-topbar .brand-copy { display: none; }.server-topbar .top-actions { width: auto; flex-wrap: wrap; justify-content: flex-end; }.server-topbar .stage-badge { display: none; }.server-connection-card { padding: 18px 16px 19px; border-radius: 25px; }.server-connection-card .card-header { align-items: flex-start; }.server-connection-card h1 { font-size: 23px; }.server-connection-card .card-copy { font-size: 12px; }.server-connection-card .orb-area { min-height: 247px; }.server-connection-card .connection-toggle { width: 180px; height: 180px; }.screen-heading { gap: 10px; }.screen-heading h1 { font-size: 26px; }.screen-subtitle { font-size: 12px; }.screen-badge { padding: 0 9px; font-size: 10px; }.shad-screen-card { padding: 10px; border-radius: 22px; }.shad-full-frame, .shad-full-frame iframe { min-height: 61vh; height: 61vh; }.guide-card { padding: 15px; }.guide-step { gap: 9px; }.guide-step p { font-size: 11px; line-height: 1.85; }.bottom-tabs { bottom: 10px; gap: 6px; }.bottom-tab { min-height: 67px; border-radius: 15px; }.bottom-tab svg { width: 21px; height: 21px; } }
