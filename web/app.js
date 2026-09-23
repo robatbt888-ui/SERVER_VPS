@@ -16,6 +16,7 @@ const updatedAt = document.querySelector('#updated-at');
 const uploadStat = document.querySelector('#upload-stat');
 const downloadStat = document.querySelector('#download-stat');
 const tabButtons = Array.from(document.querySelectorAll('[data-screen-target]'));
+const flowButtons = Array.from(document.querySelectorAll('[data-flow-target]'));
 const screens = Array.from(document.querySelectorAll('[data-screen]'));
 
 function updateThemeMeta(theme) {
@@ -45,6 +46,7 @@ function showScreen(name, updateUrl = true) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 tabButtons.forEach((button) => button.addEventListener('click', () => showScreen(button.dataset.screenTarget)));
+flowButtons.forEach((button) => button.addEventListener('click', () => showScreen(button.dataset.flowTarget)));
 showScreen(window.location.hash.slice(1) || 'connect', false);
 
 function formatTime(value) {
