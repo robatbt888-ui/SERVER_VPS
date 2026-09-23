@@ -287,3 +287,30 @@ body.app-page { overflow-x: hidden; }
     .stats-row .stat-card strong { position: absolute; right: 16px; bottom: 13px; direction: ltr; color: var(--text); font-size: 24px; line-height: 1; text-align: left; unicode-bidi: plaintext; }
     @media (max-width: 370px) { .stats-row { gap: 8px; } .stats-row .stat-card { min-height: 132px; padding-inline: 11px; } .stats-row .stat-card .stat-icon { left: 11px; } .stats-row .stat-card .stat-label, .stats-row .stat-card strong { right: 11px; } }
     
+
+    /* Reference alignment: status, connection hero and traffic cards. */
+    .page-shell { padding-bottom: 190px !important; }
+    .connection-status-row { display: flex; align-items: center; justify-content: flex-start; width: 100%; max-width: 760px; min-height: 40px; margin: 0 auto 9px; direction: ltr; }
+    .connection-status-row .status-pill { align-self: flex-start; }
+    .server-connection-card { width: 100%; max-width: 760px; margin-inline: auto; padding: 15px 16px 17px; border: 1px solid var(--line) !important; border-radius: 27px; overflow: hidden; }
+    .server-connection-card .card-header { display: block !important; width: 100%; min-height: 34px; direction: rtl !important; }
+    .server-connection-card .card-heading { width: 100%; text-align: right; }
+    .server-connection-card .card-heading h1 { margin: 0; font-size: clamp(24px, 5vw, 31px); }
+    .server-connection-card .orb-area { display: grid; place-items: center; width: 100%; min-height: 257px; margin-top: 0; overflow: hidden; }
+    .server-connection-card .connection-toggle { width: min(214px, 58vw) !important; height: auto !important; aspect-ratio: 1; }
+    .server-connection-card .status-summary { width: 100%; min-height: 73px; display: grid; place-items: center; margin: 0; padding: 12px 16px; border-radius: 21px; color: #10202c; background: linear-gradient(105deg, var(--primary), var(--blue) 55%, var(--pink)); font-size: 13px; font-weight: 900; text-align: center; }
+    .server-connection-card .inline-status { display: none !important; }
+    .traffic-title { margin: 19px 0 12px; line-height: 1.4; }
+    .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px; }
+    .stats-row .stat-card { min-height: 145px; }
+    .stats-row .stat-card strong { direction: ltr; unicode-bidi: isolate; }
+    .bottom-tabs { bottom: 12px; }
+    @media (max-width: 620px) {
+    .connection-status-row { margin-bottom: 7px; }
+    .server-connection-card { padding: 14px 14px 16px; border-radius: 25px; }
+    .server-connection-card .orb-area { min-height: 252px; }
+    .server-connection-card .status-summary { min-height: 68px; border-radius: 19px; }
+    .traffic-title { font-size: 20px; }
+    .stats-row { gap: 10px; }
+    }
+    
