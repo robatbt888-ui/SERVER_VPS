@@ -17,7 +17,6 @@
         <div class="brand-lockup">
           <img class="brand-mark" src="/assets/assets/icon.png?v=3" alt="آیکون HooshNet" />
           <div class="brand-name"><span>Hoosh</span><b>Net</b></div>
-          <div class="brand-copy"><p class="eyebrow">SERVER CONTROL</p><p class="brand-subtitle">پنل مدیریت سرور</p></div>
         </div>
         <div class="top-actions">
           <form action="/logout" method="post"><button class="button button-ghost" type="submit">خروج</button></form>
@@ -29,25 +28,19 @@
       </header>
 
       <section class="app-screen is-active" id="screen-connect" data-screen="connect" aria-labelledby="connect-title">
-        <article class="connection-card server-connection-card" id="connection-section">
-          <div class="card-header"><div class="card-heading"><p class="card-kicker">ارتباط شبکه · کنترل سرور</p><h1 id="connect-title">برقراری ارتباط</h1></div><span class="status-pill status-pill-off" id="connectio<article class="connection-card server-connection-card" id="connection-section">
-          <div class="card-header"><div class="card-heading"><p class="card-kicker">اتصال سرور</p><h1 id="connect-title">برقراری ارتباط</h1></div><span class="status-pill status-pill-off" id="connection-pill"><span class="status-pill-dot"></span><span>آماده به کار</span></span></div>
-          <div class="orb-area"><span class="orb-pulse orb-pulse-one"></span><span class="orb-pulse orb-pulse-two"></span><button class="connection-toggle is-off" id="connection-toggle" type="button" aria-label="برقراری ارتباط" aria-pressed="false"><span class="power-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M6.2 5.5a8 8 0 1 0 11.6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></span><span class="orb-label" id="connection-label">برقراری ارتباط</span></button></div>
-          <div class="status-summary" id="connection-summary">وضعیت ارتباط : ارتباط برقرار نیست</div>
-          <p class="inline-status" id="connection-status" aria-live="polite">برای شروع، دکمه‌ی برقراری ارتباط را بزنید.</p>
-        </article>
-        <section class="flow-strip" aria-label="فرایند راه‌اندازی">
-          <button class="flow-step" type="button" data-flow-target="guide"><span class="flow-number">۱</span><span><strong>آماده‌سازی سرور</strong><small>راهنما را کامل کنید</small></span><span class="flow-arrow">←</span></button>
-          <button class="flow-step" type="button" data-flow-target="shad"><span class="flow-number">۲</span><span><strong>ورود به شاد</strong><small>نشست شاد را تأیید کنید</small></span><span class="flow-arrow">←</span></button>
-          <button class="flow-step flow-step-current" type="button" data-flow-target="connect"><span class="flow-number">۳</span><span><strong>برقراری ارتباط</strong><small>اتصال واقعی سرور</small></span><span class="flow-arrow">✓</span></button>
+          <article class="connection-card server-connection-card" id="connection-section">
+            <div class="card-header"><div class="card-heading"><h1 id="connect-title">برقراری ارتباط</h1></div><span class="status-pill status-pill-off" id="connection-pill"><span class="status-pill-dot"></span><span>آماده به کار</span></span></div>
+            <div class="orb-area"><span class="orb-pulse orb-pulse-one"></span><span class="orb-pulse orb-pulse-two"></span><button class="connection-toggle is-off" id="connection-toggle" type="button" aria-label="برقراری ارتباط" aria-pressed="false"><span class="power-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M6.2 5.5a8 8 0 1 0 11.6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></span><span class="orb-label" id="connection-label">برقراری ارتباط</span></button></div>
+            <div class="status-summary" id="connection-summary">وضعیت ارتباط : ارتباط برقرار نیست</div>
+            <p class="inline-status" id="connection-status" aria-live="polite">برای شروع، دکمه‌ی برقراری ارتباط را بزنید.</p>
+          </article>
+          <h2 class="section-title traffic-title">میزان مصرف ترافیک</h2>
+          <section class="stats-row" aria-label="میزان مصرف ترافیک"><article class="stat-card stat-cyan"><span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 19 14-14M5 5h6M5 5v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span class="stat-label">ارسال شده</span><strong id="upload-stat">۰ B</strong></article><article class="stat-card stat-blue"><span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m19 5-14 14M19 19h-6M19 19v-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span class="stat-label">دریافت شده</span><strong id="download-stat">۰ B</strong></article></section>
+          <section class="notice-card server-note"><div class="notice-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v5c0 5.1 3.4 8.7 8 10 4.6-1.3 8-4.9 8-10V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /><path d="M12 8v4M12 16h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></div><div><strong>کنترل کامل با شماست</strong><p>برای برقراری ارتباط، نشست شاد شما باید روی سرور ذخیره شود. امنیت شما تضمین شده است، زیرا سرور را خودتان راه‌اندازی می‌کنید و اطلاعاتتان نزد خودتان محفوظ است و به غیر از خودتان کسی به آن‌ها دسترسی ندارد.</p></div></section>
         </section>
-        <h2 class="section-title traffic-title">میزان مصرف ترافیک</h2>
-        <section class="stats-row" aria-label="میزان مصرف ترافیک"><article class="stat-card stat-cyan"><span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 19 14-14M5 5h6M5 5v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span class="stat-label">ارسال شده</span><strong id="upload-stat">۰ B</strong></article><article class="stat-card stat-blue"><span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m19 5-14 14M19 19h-6M19 19v-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span class="stat-label">دریافت شده</span><strong id="download-stat">۰ B</strong></article></section>
-        <section class="notice-card server-note"><div class="notice-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v5c0 5.1 3.4 8.7 8 10 4.6-1.3 8-4.9 8-10V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /><path d="M12 8v4M12 16h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></div><div><strong>کنترل کامل با شماست</strong><p>برای برقراری ارتباط، نشست شاد شما باید روی سرور ذخیره شود. امنیت شما تضمین شده است، زیرا سرور را خودتان راه‌اندازی می‌کنید و اطلاعاتتان نزد خودتان محفوظ است و به غیر از خودتان کسی به آن‌ها دسترسی ندارد.</p></div></section>
-      </section>
 
-      <section class="app-screen" id="screen-shad" data-screen="shad" aria-labelledby="shad-title">
-        <div class="screen-heading"><div><p class="eyebrow">SHAD SESSION</p><h1 id="shad-title">شاد</h1><p class="screen-subtitle">ورود به شاد در همین صفحه انجام می‌شود و ادامه‌ی فرایند از همین‌جا قابل پیگیری است.</p></div><span class="screen-badge"><span class="stage-dot"></span>صفحه رسمی شاد</span></div>
+        <section class="app-screen" id="screen-shad" data-screen="shad" aria-labelledby="shad-title">
+        <div class="screen-heading"><div><h1 id="shad-title">شاد</h1><p class="screen-subtitle">ورود به شاد در همین صفحه انجام می‌شود و ادامه‌ی فرایند از همین‌جا قابل پیگیری است.</p></div></div>
         <article class="panel-card shad-screen-card">
           <div class="browser-bar"><span class="browser-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2M5 10h14v10H5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg></span><span>web.shad.ir</span><button class="reload-button" id="shad-reload" type="button" aria-label="بارگذاری دوباره شاد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0 1 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M20 4v7h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></button></div>
           <div class="shad-frame-wrap shad-full-frame"><iframe id="shad-frame" title="صفحه رسمی شاد" src="https://web.shad.ir"></iframe></div>
@@ -57,7 +50,7 @@
       </section>
 
       <section class="app-screen" id="screen-guide" data-screen="guide" aria-labelledby="guide-title">
-        <div class="screen-heading"><div><p class="eyebrow">SERVER SETUP</p><h1 id="guide-title">راهنمای راه‌اندازی سرور</h1><p class="screen-subtitle">از آماده‌سازی VPS تا اجرای سرویس و برقراری ارتباط را به همین ترتیب انجام دهید.</p></div><span class="screen-badge">صفر تا صد</span></div>
+        <div class="screen-heading"><div><h1 id="guide-title">راهنمای راه‌اندازی سرور</h1><p class="screen-subtitle">از آماده‌سازی VPS تا اجرای سرویس و برقراری ارتباط را به همین ترتیب انجام دهید.</p></div></div>
         <section class="privacy-card"><div class="privacy-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v5c0 5.1 3.4 8.7 8 10 4.6-1.3 8-4.9 8-10V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /><path d="m8.5 12 2.3 2.3 4.7-4.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div><strong>نکته‌ی امنیتی</strong><p>فرمان‌ها و فایل‌ها را فقط از منبع معتبر دریافت کنید. رمز پنل و نشست شاد را با هیچ‌کس به اشتراک نگذارید و پیش از اجرای هر فرمان آن را بررسی کنید.</p></div></section>
         <div class="guide-card panel-card"><div class="guide-card-heading"><h2>مراحل سمت سرور و اتصال</h2><span>از صفر تا اتصال</span></div><ol class="guide-steps">
           <li class="guide-step"><span class="step-number">۱</span><div><h3>انتخاب و ورود به VPS</h3><p>یک VPS قابل اعتماد با دسترسی مدیریتی تهیه کنید و از طریق پنل ارائه‌دهنده یا SSH وارد آن شوید.</p></div></li>
