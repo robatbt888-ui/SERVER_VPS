@@ -28,11 +28,11 @@
       </header>
 
       <section class="app-screen is-active" id="screen-connect" data-screen="connect" aria-labelledby="connect-title">
+          <div class="connection-status-row"><span class="status-pill status-pill-off" id="connection-pill"><span class="status-pill-dot"></span><span>آماده به کار</span></span></div>
           <article class="connection-card server-connection-card" id="connection-section">
-            <div class="card-header"><div class="card-heading"><h1 id="connect-title">برقراری ارتباط</h1></div><span class="status-pill status-pill-off" id="connection-pill"><span class="status-pill-dot"></span><span>آماده به کار</span></span></div>
+            <div class="card-header"><div class="card-heading"><h1 id="connect-title">برقراری ارتباط</h1></div></div>
             <div class="orb-area"><span class="orb-pulse orb-pulse-one"></span><span class="orb-pulse orb-pulse-two"></span><button class="connection-toggle is-off" id="connection-toggle" type="button" aria-label="برقراری ارتباط" aria-pressed="false"><span class="power-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M6.2 5.5a8 8 0 1 0 11.6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></span><span class="orb-label" id="connection-label">برقراری ارتباط</span></button></div>
             <div class="status-summary" id="connection-summary">وضعیت ارتباط : ارتباط برقرار نیست</div>
-            <p class="inline-status" id="connection-status" aria-live="polite">برای شروع، دکمه‌ی برقراری ارتباط را بزنید.</p>
           </article>
           <h2 class="section-title traffic-title">میزان مصرف ترافیک</h2>
           <section class="stats-row" aria-label="میزان مصرف ترافیک"><article class="stat-card stat-cyan"><span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 19 14-14M5 5h6M5 5v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span class="stat-label">ارسال شده</span><strong id="upload-stat">۰ B</strong></article><article class="stat-card stat-blue"><span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m19 5-14 14M19 19h-6M19 19v-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span class="stat-label">دریافت شده</span><strong id="download-stat">۰ B</strong></article></section>
