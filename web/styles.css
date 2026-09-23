@@ -249,3 +249,30 @@ html[data-theme="dark"] .server-topbar .icon-button, html[data-theme="dark"] .au
 .bottom-tabs { left: 50%; right: auto; width: min(calc(100% - 24px), 720px); transform: translateX(-50%); padding: 7px; border: 1px solid rgba(255,255,255,.1); border-radius: 25px; background: #05070a; box-shadow: 0 16px 45px rgba(0,0,0,.42); }
 .bottom-tab { min-height: 63px; border-radius: 18px; }
 @media (max-width: 620px) { .brand-copy { display: none; } .server-topbar .brand-lockup { gap: 7px; } .brand-mark { width: 38px; height: 38px; flex-basis: 38px; border-radius: 12px; } .flow-strip { grid-template-columns: 1fr; gap: 7px; } .flow-step { min-height: 54px; } .flow-step-current { order: -1; } .stat-card { min-height: 61px; } .shad-full-frame, .shad-full-frame iframe { min-height: 70vh; height: 70vh; } }
+
+
+/* Mobile stability repair: keep the server panel inside the viewport. */
+body.app-page { overflow-x: hidden; }
+.server-topbar { position: relative; width: 100%; min-height: 48px; flex-direction: row !important; flex-wrap: nowrap !important; justify-content: center; }
+.server-topbar .brand-lockup { min-width: 0; max-width: 100%; flex: 0 1 auto; }
+.server-topbar .top-actions { position: absolute; left: 0; top: 50%; width: auto !important; min-width: 0; flex: 0 0 auto; flex-wrap: nowrap !important; justify-content: flex-start !important; transform: translateY(-50%); }
+.server-topbar .top-actions form { margin: 0; }
+.server-topbar .brand-name { font-size: clamp(23px, 7vw, 31px); }
+.server-connection-card { width: 100%; max-width: 760px; min-width: 0; }
+.server-connection-card .card-header { display: flex !important; width: 100%; min-width: 0; flex-direction: column !important; align-items: stretch !important; gap: 10px; direction: rtl !important; }
+.server-connection-card .card-heading { width: 100%; min-width: 0; max-width: 100%; overflow: hidden; text-align: right; }
+.server-connection-card .card-heading h1 { max-width: 100%; overflow-wrap: anywhere; }
+.server-connection-card .status-pill { align-self: flex-start; max-width: 100%; }
+.server-connection-card .orb-area { width: 100%; min-width: 0; overflow: hidden; }
+.server-connection-card .connection-toggle { width: min(180px, 58vw) !important; height: auto !important; aspect-ratio: 1; }
+.flow-strip, .stats-row, .server-note { width: 100%; min-width: 0; }
+.flow-step, .stat-card, .notice-card { min-width: 0; }
+@media (max-width: 620px) {
+  .page-shell { width: calc(100% - 24px); min-width: 0; }
+  .server-topbar .brand-lockup { gap: 7px; }
+  .server-topbar .top-actions { gap: 6px; }
+  .server-topbar .button-ghost { padding-inline: 10px; }
+  .server-connection-card { padding: 16px 14px 18px; }
+  .server-connection-card .card-header h1 { font-size: 22px; }
+  .server-connection-card .orb-area { min-height: 220px; }
+}
