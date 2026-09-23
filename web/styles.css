@@ -276,3 +276,14 @@ body.app-page { overflow-x: hidden; }
   .server-connection-card .card-header h1 { font-size: 22px; }
   .server-connection-card .orb-area { min-height: 220px; }
 }
+
+
+    /* Traffic cards: match the two-card mobile app layout. */
+    .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px; }
+    .stats-row .stat-card { position: relative; display: block; min-height: 145px; padding: 14px 16px; overflow: hidden; border-radius: 21px; }
+    .stats-row .stat-card .stat-icon { position: absolute; top: 14px; left: 14px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; }
+    .stats-row .stat-card .stat-icon svg { width: 22px; height: 22px; }
+    .stats-row .stat-card .stat-label { position: absolute; top: 73px; right: 16px; left: 10px; overflow: hidden; color: var(--muted); font-size: 11px; text-align: right; text-overflow: ellipsis; white-space: nowrap; }
+    .stats-row .stat-card strong { position: absolute; right: 16px; bottom: 13px; direction: ltr; color: var(--text); font-size: 24px; line-height: 1; text-align: left; unicode-bidi: plaintext; }
+    @media (max-width: 370px) { .stats-row { gap: 8px; } .stats-row .stat-card { min-height: 132px; padding-inline: 11px; } .stats-row .stat-card .stat-icon { left: 11px; } .stats-row .stat-card .stat-label, .stats-row .stat-card strong { right: 11px; } }
+    
